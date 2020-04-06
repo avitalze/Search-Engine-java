@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" maxHeight="500.0" maxWidth="600.0" minHeight="500.0" minWidth="600.0" prefHeight="500.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane maxHeight="500.0" maxWidth="600.0" minHeight="500.0" minWidth="600.0" prefHeight="500.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="clear_button" layoutX="66.0" layoutY="166.0" mnemonicParsing="false" onAction="#deletePostingFiles" prefHeight="48.0" prefWidth="124.0" text="Clear" textFill="#1ea489" />
+            <Button fx:id="display_button" layoutX="66.0" layoutY="250.0" mnemonicParsing="false" onAction="#showDic" prefHeight="48.0" prefWidth="124.0" text="Display Dictionary" textFill="#1ea489" />
+            <Button fx:id="load_button" layoutX="66.0" layoutY="333.0" mnemonicParsing="false" onAction="#uploadDictionary" prefHeight="48.0" prefWidth="124.0" text="Load Dictionary to Memory" textFill="#1ea489" />
+            <CheckBox fx:id="stemming_checkBox" layoutX="316.0" layoutY="405.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="178.0" text="With Stemming" textFill="#1ea489">
+               <font>
+                  <Font size="18.0" />
+               </font></CheckBox>
+            <TextField fx:id="corpusPath_textField" layoutX="252.0" layoutY="177.0" prefHeight="25.0" prefWidth="258.0" />
+            <Label fx:id="corpus_label" layoutX="260.0" layoutY="145.0" prefHeight="38.0" prefWidth="178.0" text="Corpus path" textFill="#1ea489">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Button fx:id="browse_corpus_button" layoutX="521.0" layoutY="177.0" mnemonicParsing="false" onAction="#browseCorpus" text="browse" textFill="#1ea489" />
+            <Button fx:id="browse_postFile_button" layoutX="522.0" layoutY="274.0" mnemonicParsing="false" onAction="#browsePosting" text="browse" textFill="#1ea489" />
+            <TextField fx:id="posting_textFeild" layoutX="253.0" layoutY="274.0" prefHeight="25.0" prefWidth="258.0" />
+            <Label fx:id="posting_label" layoutX="260.0" layoutY="239.0" prefHeight="38.0" prefWidth="144.0" text="Posting path" textFill="#1ea489">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="Header_label" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="129.0" prefWidth="591.0" text="Our Search Engine" textAlignment="CENTER" textFill="#1ea489">
+               <font>
+                  <Font name="Eras Demi ITC" size="48.0" />
+               </font></Label>
+            <Button fx:id="buildInvertedIndex_button" layoutX="293.0" layoutY="334.0" mnemonicParsing="false" onAction="#buildInvertedIndex" prefHeight="48.0" prefWidth="202.0" text="Build Inverted Index" textFill="#1ea489" />
+         </children>
+      </Pane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
